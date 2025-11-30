@@ -1,0 +1,77 @@
+# CDNs e Alias em DNS
+
+## 1. CDNs — Content Delivery Networks
+
+### O que é  
+Uma CDN (Content Delivery Network) é uma **rede distribuída de servidores** que entrega conteúdo web de forma rápida, confiável e eficiente para usuários em todo o mundo.
+
+### Para que serve  
+- Reduz **latência** aproximando conteúdo do usuário  
+- Diminui a **carga no servidor de origem**  
+- Aumenta **disponibilidade** e tolerância a falhas  
+- Protege contra **DDoS** ao absorver tráfego malicioso  
+- Permite **escala global** sem aumentar infraestrutura local
+
+### Como funciona  
+1. Conteúdo estático (imagens, CSS, JS, vídeos) é replicado em múltiplos servidores da CDN.  
+2. Quando um usuário acessa o site:  
+   - O DNS resolve o domínio apontando para a **CDN mais próxima** geograficamente.  
+   - O servidor da CDN entrega o conteúdo.  
+3. Se o conteúdo não estiver em cache, a CDN busca do **servidor de origem** e armazena para futuros acessos.
+
+### Benefícios principais  
+- **Melhor desempenho:** menor tempo de carregamento  
+- **Alta disponibilidade:** falha em um nó não derruba o serviço  
+- **Segurança:** mitigação de ataques DDoS  
+- **Economia de largura de banda:** o conteúdo em cache reduz tráfego do servidor principal  
+
+### Exemplos de CDNs  
+- Cloudflare  
+- Akamai  
+- AWS CloudFront  
+- Fastly  
+- Google Cloud CDN
+
+---
+
+## 2. Alias / CNAME em DNS
+
+### O que é  
+Um **CNAME (Canonical Name)** é um tipo de registro DNS que cria **um alias para outro domínio**.  
+
+Em outras palavras:
+- Um domínio A pode apontar para domínio B usando CNAME.  
+- O cliente que consulta A é automaticamente redirecionado para B.
+
+### Diferença entre CNAME e A/AAAA  
+| Registro | O que aponta | Uso |
+|----------|--------------|-----|
+| A        | IP v4        | Direto para endereço do servidor |
+| AAAA     | IP v6        | Direto para endereço do servidor |
+| CNAME    | Outro domínio| Alias para facilitar manutenção ou uso de CDNs |
+
+### Por que usar CNAME  
+- Facilita a **manutenção de endereços IP**  
+- Permite integrar facilmente **CDNs**  
+- Cria subdomínios apontando para serviços externos (ex.: `blog.example.com → hosted.blogservice.com`)  
+- Evita alterar múltiplos registros quando o IP muda
+
+### Como funciona com CDNs  
+1. Seu domínio `www.example.com` tem CNAME apontando para `example.cdnprovider.net`.  
+2. O DNS resolve `example.cdnprovider.net` para o IP do servidor CDN mais próximo.  
+3. O usuário recebe o conteúdo da CDN, sem saber o IP real do servidor de origem.
+
+### Observações importantes  
+- CNAME **não pode coexistir com outros registros** no mesmo nome (como A, AAAA ou MX)  
+- CNAME é útil para **subdomínios**, mas o domínio raiz geralmente precisa de registros A/AAAA  
+- Para domínios raiz, alguns provedores oferecem **ALIAS ou ANAME** (funcionam como CNAME, mas permitem coexistir com outros registros)
+
+---
+
+## 3. Resumo
+
+- **CDN:** Rede de servidores distribuídos que entrega conteúdo de forma rápida e segura.  
+- **CNAME / Alias:** Registro DNS que aponta um domínio para outro, facilitando manutenção e integração com CDNs.  
+- **Integração CDN + CNAME:** Permite que o site use servidores distribuídos sem expor IPs de origem, garantindo desempenho e segurança.
+
+# Siga para o próximo tópico -> [PTR](./PTR.md)
