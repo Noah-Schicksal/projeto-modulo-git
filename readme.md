@@ -1,5 +1,7 @@
 # Primeiro ciclo até agora
 
+Opa pessoal, bão? **me chamo Michael Jhonathan** e faço aqui um pequeno grande resumo sobre tudo estudado até agora relacionado a redes do nosso módulo anterior de hard skills com o professor **Kenji**
+
 [Redes](./redes.md)  
 [Protocolos de comunicação em redes](./PCR.md)  
 [Endereçamento de IP](./IPv4%20e%20IPv6.md)  

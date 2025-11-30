@@ -1,3 +1,5 @@
+# [Início](./readme.md)
+
 # Balanceamento de Carga (Load Balancing)
 
 O **balanceamento de carga** é a técnica de distribuir requisições de clientes entre múltiplos servidores, garantindo desempenho, escalabilidade e alta disponibilidade.

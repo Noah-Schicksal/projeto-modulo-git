@@ -1,3 +1,5 @@
+# [Início](./readme.md)
+
 # PTR — Registro Pointer em DNS
 
 ## O que é  

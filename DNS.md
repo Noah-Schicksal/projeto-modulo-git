@@ -1,3 +1,5 @@
+# [Início](./readme.md)
+
 # DNS — O que é, para que serve e como funciona
 
 ## 1. O que é DNS?

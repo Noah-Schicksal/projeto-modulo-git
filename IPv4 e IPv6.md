@@ -1,3 +1,5 @@
+# [Início](./readme.md)
+
 # IPv4, IPv6 e NAT
 
 A comunicação na internet depende de endereços IP. Esses endereços identificam dispositivos e permitem que dados trafeguem entre computadores, servidores e redes.  
