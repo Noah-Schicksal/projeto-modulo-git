@@ -273,4 +273,4 @@ Isso impede:
 - Cache local  
 - Bloqueio de domínios maliciosos
 
-# Siga para o próximo tópico -> [CDNs](./CDNs)
+# Siga para o próximo tópico -> [CDNs](./CDNs.md)
