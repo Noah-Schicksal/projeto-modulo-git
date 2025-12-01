@@ -167,4 +167,4 @@ O computador armazena no cache por alguns minutos ou horas (TTL).
 - Envolve root servers, TLDs e servidores autoritativos.  
 - É essencial para navegação, e-mail, serviços na web, autenticação e muito mais.
 
-# Siga para o próximo tópico -> [Tipos de ataque](./Tipos%20de%20ataque.md)
+# Siga para o próximo tópico -> [Tipos de ataque](./Tipos_de_ataque.md)

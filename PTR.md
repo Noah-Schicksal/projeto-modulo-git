@@ -68,4 +68,4 @@ Exemplo IPv6:
 - Um IP geralmente deve ter **apenas um PTR** apontando para um domínio principal.  
 - Para múltiplos domínios hospedados no mesmo IP, o PTR aponta para o domínio principal e os demais usam A/AAAA normalmente.
 
-# Siga para o próximo tópico -> [Balanceamento de carga](./Balanceamento%20de%20carga.md)
+# Siga para o próximo tópico -> [Balanceamento de carga](./Balanceamento_de_carga.md)
